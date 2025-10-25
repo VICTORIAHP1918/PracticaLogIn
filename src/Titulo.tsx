@@ -1,6 +1,8 @@
+import "./SeccionCentral.css"
+
 const Titulo = () =>{
-return <h1>
-    login
+return <h1 className="centrar">
+    LogIn
 </h1>
 }
 
