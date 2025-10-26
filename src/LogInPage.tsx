@@ -1,5 +1,15 @@
 import SeccionCentral from "./SeccionCentral";
 
+const LogIn = (username:string, password:string) =>{
+  if(username == "victoria" && password=="victoria"){
+    //login correcto
+    console.log("Login exitoso")
+  }
+  else{
+    //login incorrecto
+    console.log("Login error")
+  }
+}
 const LogInPage = ()=>{
     return <div>
       <div className='row'>
@@ -8,7 +18,8 @@ const LogInPage = ()=>{
         </div>
 
          <div className='col'>
-          <SeccionCentral texto="LogIn"/>
+          <SeccionCentral texto="LogIn"
+          onLogin= {LogIn}/>
         </div>
 
          <div className='col'>

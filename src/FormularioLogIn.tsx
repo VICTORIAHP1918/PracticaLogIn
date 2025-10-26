@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const FormularioLogIn = ()=>{
+const FormularioLogIn = (props : FormularioLogInProps)=>{
 
   const[username, setUserName] = useState<string>("")
   const[password, setPassword] = useState<string> ("")
@@ -8,7 +8,6 @@ const FormularioLogIn = ()=>{
   const handleUserNameOnChange = (e : React.ChangeEvent<HTMLInputElement>) =>{
     setUserName(e.currentTarget.value)
   }
-  
 
   const handlePasswordOnChange = (e : React.ChangeEvent<HTMLInputElement>) =>{
     setPassword(e.currentTarget.value)
@@ -30,12 +29,17 @@ const FormularioLogIn = ()=>{
                  onChange={handlePasswordOnChange}/>
               </div>
 
-              <button className="btn btn-success w-100 mt-2" type='button'> Ingresar</button>
+              <button className="btn btn-success w-100 mt-2" 
+              type='button'
+              onClick={()=>{props.onLogin(username,password)} }
+              > Ingresar</button>
             </form>
 
 }
+
+interface FormularioLogInProps{
+  onLogin : (username:string, password:string) => void
+}
 export default FormularioLogIn;
 
-function setPassword(value: string) {
-  throw new Error("Function not implemented.");
-}
+
