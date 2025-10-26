@@ -7,7 +7,7 @@ const FormularioLogIn = ()=>{
 
               <div>
                  <label className="form-label"> Contraseña: </label>
-                <input className="form-control" type="password" />
+                 <input className="form-control" type="password" />
               </div>
 
               <button className="btn btn-success w-100 mt-2" type='button'> Ingresar</button>

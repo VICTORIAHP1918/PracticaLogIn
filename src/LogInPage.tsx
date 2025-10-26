@@ -1,5 +1,4 @@
 import SeccionCentral from "./SeccionCentral";
-import Titulo from "./Titulo";
 
 const LogInPage = ()=>{
     return <div>
@@ -9,8 +8,7 @@ const LogInPage = ()=>{
         </div>
 
          <div className='col'>
-             <Titulo/>
-          <SeccionCentral/>
+          <SeccionCentral texto="LogIn"/>
         </div>
 
          <div className='col'>
